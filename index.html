@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rocha Contracting Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#000;
+      --text:#222;
+      --bg:#fff;
+      --panel:#f5f5f5;
+      --border:#e5e5e5;
+      --shadow:0 2px 10px rgba(0,0,0,.06);
+      --font:'Montserrat', Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      font-family:var(--font);
+      font-weight:400;
+      color:var(--text);
+      line-height:1.65;
+      background:var(--bg);
+    }
+
+    h1,h2,h3{
+      font-weight:700;
+      letter-spacing:.4px;
+      margin:0 0 10px;
+    }
+
+    /* LOGO BAR */
+    .logo-bar{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+    }
+    .logo-bar-inner{
+      max-width:1100px;
+      margin:auto;
+      padding:14px 16px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .logo-img{
+      width:min(360px,90vw);
+      height:auto;
+      display:block;
+    }
+
+    /* HEADER */
+    header{
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:18px 16px 22px;
+    }
+    header p{
+      margin:6px 0 0;
+      font-size:15px;
+      font-weight:500;
+      opacity:.95;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:30px 20px;
+    }
+
+    /* ABOUT */
+    .about{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .about p{ margin-top:10px; }
+
+    /* SERVICES */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:16px;
+    }
+    .service-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:20px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    /* CONTACT */
+    .contact{
+      background:var(--panel);
+      padding:34px 20px;
+      margin-top:10px;
+    }
+    .contact-inner{
+      max-width:900px;
+      margin:auto;
+      display:grid;
+      gap:18px;
+    }
+    .contact-cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      font-weight:500;
+    }
+
+    /* MAP IMAGE */
+    .map-title{
+      text-align:center;
+      font-size:18px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+    .map-image-wrap{
+      display:flex;
+      justify-content:center;
+    }
+    .service-area-img{
+      width:75%;
+      max-width:820px;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+    .map-caption{
+      text-align:center;
+      font-weight:600;
+      margin-top:10px;
+    }
+
+    /* FORM */
+    .form-wrap{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+
+    footer{
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:14px;
+      font-size:14px;
+      font-weight:500;
+    }
+
+    a{
+      color:#000;
+      font-weight:600;
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGO -->
+  <div class="logo-bar">
+    <div class="logo-bar-inner">
+      <img src="PHOTO-2026-01-30-11-37-17.jpg" alt="Rocha Contracting Inc. Logo" class="logo-img">
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <p>Cleaning services - transportation - delivery</p>
+    <h1>ROCHA CONTRACTING INC.</h1>
+    <p>Fraser Valley &amp; Lower Mainland, BC – Canada</p>
+  </header>
+
+  <div class="container">
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>
+        Rocha Contracting Inc. was founded in 2025 with a mission to deliver dependable,
+        high‑quality service rooted in family values. As a family‑run business, we take
+        pride in building strong relationships and treating every project with care.
+      </p>
+      <p>
+        With over 15 years of experience in transportation and delivery, and more than a decade
+        in heavy‑duty and commercial cleaning, our team brings proven expertise to every job.
+        Whether we’re moving goods or cleaning spaces, we’re committed to reliable, professional
+        service you can count on.
+      </p>
+    </section>
+
+    <!-- SERVICES -->
+    <h2 style="margin-top:26px;">Our Services</h2>
+    <div class="services">
+
+      <div class="service-box">
+        <h3>Commercial &amp; Residential Cleaning</h3>
+        <p>
+          Comprehensive cleaning for residential/commercial buildings and post‑construction projects
+          for Fraser Valley, Lower Mainland, and Fraser‑Cascade regions.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Transportation Services</h3>
+        <p>
+          Professional 5‑seat passenger van service offering dependable transport throughout
+          the Fraser Valley and Lower Mainland.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Delivery Services</h3>
+        <p>
+          Reliable and efficient delivery services throughout the Fraser Valley and Lower Mainland.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="contact-inner">
+      <h2>Contact</h2>
+
+      <div class="contact-cards">
+        <div class="card">📞 <strong>Phone:</strong> 604‑316‑8221</div>
+        <div class="card">✉️ <strong>Email:</strong> <a href="mailto:rochacontracting87@gmail.com">rochacontracting87@gmail.com</a></div>
+      </div>
+
+      <!-- MAP IMAGE -->
+      <div class="card">
+        <div class="map-title">Serving the Fraser Valley &amp; Lower Mainland</div>
+        <div class="map-image-wrap">
+          <img src="Rb.gif" alt="Service area map" class="service-area-img">
+        </div>
+        <p class="map-caption">Business location: Chilliwack, BC</p>
+      </div>
+
+      <!-- JOTFORM -->
+      <div class="form-wrap">
+        <h3>Request a Quote or Inquire About Our Services</h3>
+        <script type="text/javascript" src="https://form.jotform.com/jsform/260295934148060"></script>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Rocha Contracting Inc. | All Rights Reserved
+  </footer>
+
+</body>
+</html>
