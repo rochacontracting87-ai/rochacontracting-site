@@ -191,7 +191,7 @@
   <header>
     <p>CLEANING SERVICES - TRANSPORTATION - DELIVERY</p>
     <h1>ROCHA CONTRACTING INC.</h1>
-    <p>Fraser Valley &amp; Lower Mainland, BC – Canada</p>
+    <p>Fraser-Cascade Region, Fraser Valley &amp; Lower Mainland, BC – Canada</p>
   </header>
 
   <div class="container">
@@ -254,7 +254,7 @@
 
       <!-- MAP IMAGE -->
       <div class="card">
-        <div class="map-title">Serving the Fraser Valley &amp; Lower Mainland</div>
+        <div class="map-title">Serving the Fraser-Cascade, Fraser Valley &amp; Lower Mainland Regions</div>
         <div class="map-image-wrap">
           <img src="Rb.gif" alt="Service area map" class="service-area-img">
         </div>
