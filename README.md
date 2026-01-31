@@ -189,7 +189,7 @@
 
   <!-- HEADER -->
   <header>
-    <p>Cleaning services - transportation - delivery</p>
+    <p>CLEANING SERVICES - TRANSPORTATION - DELIVERY</p>
     <h1>ROCHA CONTRACTING INC.</h1>
     <p>Fraser Valley &amp; Lower Mainland, BC – Canada</p>
   </header>
