@@ -225,9 +225,9 @@
         <p>
           Reliable cleaning services for offices, facilities, and industrial spaces,
           delivered with consistent standards and minimal disruption to operations.
-          Services include scheduled janitorial cleaning, post‑construction cleaning,
-          heavy‑duty detailing, floor scrubbing, stripping and waxing, window cleaning,
-          carpet and upholstery cleaning, and tile &amp; grout care.
+          Services include post‑construction cleaning, heavy‑duty detailing,
+          floor scrubbing, stripping and waxing, window cleaning, carpet and
+          upholstery cleaning, and tile and grout care.
         </p>
         <p>
           <strong>Experience includes:</strong> Healthcare facilities, schools,
@@ -251,9 +251,9 @@
         </p>
         <p>
           <strong>Specialized experience includes:</strong> BC Housing operations
-          residential move‑out cleaning, minor biohazard cleaning, and post‑treatment
-          bed bug cleaning for residential properties, completed with care,
-          discretion, and attention to safety.
+          residential move‑out cleaning, minor biohazard cleaning, junk removal,
+          and post‑treatment bed bug cleaning for residential properties, completed
+          with care, discretion, and attention to safety.
         </p>
       </div>
 
