@@ -323,6 +323,7 @@
       <li>Minor biohazard cleaning</li>
       <li>Post‑treatment bed bug cleaning</li>
       <li>Inspection‑ready unit turnovers</li>
+      <li>Junk removal</li>
       <li>Short‑notice or time‑sensitive projects</li>
     </ul>
   </div>
