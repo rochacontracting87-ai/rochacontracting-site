@@ -189,8 +189,8 @@
 
   <!-- HEADER -->
   <header>
-    <p>PROFESSIONAL CLEANING SERVICES</p>
-    <h1>ROCHA CONTRACTING INC.</h1>
+    <p>ROCHA CONTRACTING INC.</p>
+    <h1>PROFESSIONAL CLEANING SERVICES</h1>
     <p>Fraser-Cascade Region, Fraser Valley &amp; Lower Mainland, BC – Canada</p>
   </header>
 
