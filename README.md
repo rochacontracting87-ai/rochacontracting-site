@@ -101,6 +101,28 @@
       box-shadow:var(--shadow);
     }
 
+    /* SERVICE SUMMARY */
+    .service-summary{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:24px;
+    }
+    .summary-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .summary-box ul{
+      margin:0;
+      padding-left:18px;
+    }
+    .summary-box li{
+      margin-bottom:6px;
+    }
+
     /* CONTACT */
     .contact{
       background:var(--panel);
@@ -180,117 +202,164 @@
 
 <body>
 
-  <!-- LOGO -->
-  <div class="logo-bar">
-    <div class="logo-bar-inner">
-      <img src="PHOTO-2026-01-30-11-37-17.jpg" alt="Rocha Contracting Inc. Logo" class="logo-img">
-    </div>
+<!-- LOGO -->
+<div class="logo-bar">
+  <div class="logo-bar-inner">
+    <img src="PHOTO-2026-01-30-11-37-17.jpg" alt="Rocha Contracting Inc. Logo" class="logo-img">
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <p>ROCHA CONTRACTING INC.</p>
+  <h1>PROFESSIONAL CLEANING SERVICES</h1>
+  <p>Fraser-Cascade Region, Fraser Valley &amp; Lower Mainland, BC – Canada</p>
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Rocha Contracting Inc. was founded in 2024 with a mission to deliver dependable,
+    high‑quality commercial and industrial cleaning services grounded in strong family
+    values. As a family-run business, we understand the importance of trust, consistency,
+    and accountability - especially when caring for professional and operational spaces.
+  </p>
+  <p>
+    With over a decade of experience in heavy-duty, commercial, and industrial cleaning,
+    our team is equipped to meet the rigorous demands of property managers, facilities teams,
+    and commercial clients. We specialize in maintaining clean, safe, and compliant environments,
+    with a strong focus on reliability, attention to detail, and minimal disruption to operations.
+    Rocha Contracting Inc. is a cleaning partner you can rely on to protect your assets and
+    uphold professional standards.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<h2 style="margin-top:26px;">Our Services</h2>
+<div class="services">
+
+  <div class="service-box">
+    <h3>Commercial Cleaning</h3>
+    <p>
+      Reliable cleaning services for offices, facilities, and industrial spaces,
+      delivered with consistent standards and minimal disruption to operations.
+      Services include post‑construction cleaning, heavy‑duty detailing,
+      floor scrubbing, stripping and waxing, window cleaning, carpet and
+      upholstery cleaning, and tile and grout care.
+    </p>
+    <p>
+      <strong>Experience includes:</strong> Healthcare facilities, schools,
+      manufacturing and warehouse environments, churches, nonprofit organizations,
+      and large commercial projects — including Abbotsford Regional Hospital,
+      Sk’elep School of Excellence (Kamloops), Stein Valley Nlaka’pamux School (Lytton),
+      Tycrop, Petcurean, Northview Church (Abbotsford), Chilliwack Community Services,
+      and the Red Bull post‑construction project in Chilliwack.
+    </p>
   </div>
 
-  <!-- HEADER -->
-  <header>
-    <p>ROCHA CONTRACTING INC.</p>
-    <h1>PROFESSIONAL CLEANING SERVICES</h1>
-    <p>Fraser-Cascade Region, Fraser Valley &amp; Lower Mainland, BC – Canada</p>
-  </header>
-
-  <div class="container">
-
-    <!-- ABOUT -->
-    <section class="about">
-      <h2>About Us</h2>
-      <p>
-        Rocha Contracting Inc. was founded in 2024 with a mission to deliver dependable,
-        high‑quality commercial and industrial cleaning services grounded in strong family
-        values. As a family-run business, we understand the importance of trust, consistency,
-        and accountability - especially when caring for professional and operational spaces.
-      </p>
-      <p>
-        With over a decade of experience in heavy-duty, commercial, and industrial cleaning,
-        our team is equipped to meet the rigorous demands of property managers, facilities teams,
-        and commercial clients. We specialize in maintaining clean, safe, and compliant environments,
-        with a strong focus on reliability, attention to detail, and minimal disruption to operations.
-        Rocha Contracting Inc. is a cleaning partner you can rely on to protect your assets and
-        uphold professional standards.
-      </p>
-    </section>
- 
-    <!-- SERVICES -->
-    <h2 style="margin-top:26px;">Our Services</h2>
-    <div class="services">
-
-      <!-- COMMERCIAL -->
-      <div class="service-box">
-        <h3>Commercial Cleaning</h3>
-        <p>
-          Reliable cleaning services for offices, facilities, and industrial spaces,
-          delivered with consistent standards and minimal disruption to operations.
-          Services include post‑construction cleaning, heavy‑duty detailing,
-          floor scrubbing, stripping and waxing, window cleaning, carpet and
-          upholstery cleaning, and tile and grout care.
-        </p>
-        <p>
-          <strong>Experience includes:</strong> Healthcare facilities, schools,
-          manufacturing and warehouse environments, churches, nonprofit organizations,
-          and large commercial projects — including Abbotsford Regional Hospital,
-          Sk’elep School of Excellence (Kamloops), Stein Valley Nlaka’pamux School (Lytton),
-          Tycrop, Petcurean, Northview Church (Abbotsford), Chilliwack Community Services,
-          and the Red Bull post‑construction project in Chilliwack.
-        </p>
-      </div>
-
-      <!-- RESIDENTIAL -->
-      <div class="service-box">
-        <h3>Residential Cleaning</h3>
-        <p>
-          Comprehensive move‑in, move‑out, and deep cleaning services designed for tenants,
-          landlords, and property managers who need spaces reset quickly and thoroughly.
-          Services include heavy‑duty and post‑construction cleaning, floor scrubbing,
-          stripping and waxing, window cleaning, carpet and upholstery cleaning,
-          ceiling cleaning, and tile and grout restoration.
-        </p>
-        <p>
-          <strong>Specialized experience includes:</strong> BC Housing operations
-          residential move‑out cleaning, minor biohazard cleaning, junk removal,
-          and post‑treatment bed bug cleaning for residential properties, completed
-          with care, discretion, and attention to safety.
-        </p>
-      </div>
-
-    </div>
+  <div class="service-box">
+    <h3>Residential Cleaning</h3>
+    <p>
+      Comprehensive move‑in, move‑out, and deep cleaning services designed for tenants,
+      landlords, and property managers who need spaces reset quickly and thoroughly.
+      Services include heavy‑duty and post‑construction cleaning, floor scrubbing,
+      stripping and waxing, window cleaning, carpet and upholstery cleaning,
+      ceiling cleaning, and tile and grout restoration.
+    </p>
+    <p>
+      <strong>Specialized experience includes:</strong> BC Housing operations
+      residential move‑out cleaning, minor biohazard cleaning, junk removal,
+      and post‑treatment bed bug cleaning for residential properties, completed
+      with care, discretion, and attention to safety.
+    </p>
   </div>
 
-  <!-- CONTACT -->
-  <section class="contact">
-    <div class="contact-inner">
-      <h2>Contact</h2>
+</div>
 
-      <div class="contact-cards">
-        <div class="card">📞 <strong>Phone:</strong> 604‑316‑8221</div>
-        <div class="card">✉️ <strong>Email:</strong> <a href="mailto:info@rochacontracting.ca">info@rochacontracting.ca</a></div>
-      </div>
+<!-- SERVICE SUMMARY -->
+<h2 style="margin-top:36px;">Service Summary</h2>
+<p>Select the services you’re looking for — we tailor each job to your needs.</p>
 
-      <!-- MAP -->
-      <div class="card">
-        <div class="map-title">Serving the Fraser‑Cascade, Fraser Valley &amp; Lower Mainland Regions</div>
-        <div class="map-image-wrap">
-          <img src="Rb.gif" alt="Service area map" class="service-area-img">
-        </div>
-        <p class="map-caption">Business location: Chilliwack, BC</p>
-      </div>
+<div class="service-summary">
 
-      <!-- FORM -->
-      <div class="form-wrap">
-        <h3>Request a Quote or Inquire About Our Services</h3>
-        <script type="text/javascript" src="https://form.jotform.com/jsform/260295934148060"></script>
-      </div>
+  <div class="summary-box">
+    <h3>Commercial Cleaning</h3>
+    <ul>
+      <li>Routine & scheduled commercial cleaning</li>
+      <li>Office & facility cleaning</li>
+      <li>Industrial & heavy‑duty cleaning</li>
+      <li>Post‑construction cleaning</li>
+      <li>Floor scrubbing, stripping & waxing</li>
+      <li>Window cleaning</li>
+      <li>Carpet & upholstery cleaning</li>
+      <li>Tile & grout cleaning</li>
+      <li>Ceiling & high‑surface cleaning</li>
+    </ul>
+  </div>
 
+  <div class="summary-box">
+    <h3>Residential Cleaning</h3>
+    <ul>
+      <li>Move‑in cleaning</li>
+      <li>Move‑out cleaning</li>
+      <li>Deep cleaning</li>
+      <li>Heavy‑duty residential cleaning</li>
+      <li>Post‑construction residential cleaning</li>
+      <li>Floor scrubbing, stripping & waxing</li>
+      <li>Window cleaning</li>
+      <li>Carpet & upholstery cleaning</li>
+      <li>Tile & grout cleaning</li>
+      <li>Ceiling cleaning</li>
+    </ul>
+  </div>
+
+  <div class="summary-box">
+    <h3>Specialized Services</h3>
+    <ul>
+      <li>BC Housing & large‑scale move‑out cleaning</li>
+      <li>Minor biohazard cleaning</li>
+      <li>Post‑treatment bed bug cleaning</li>
+      <li>Inspection‑ready unit turnovers</li>
+      <li>Short‑notice or time‑sensitive projects</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="contact-inner">
+    <h2>Contact</h2>
+
+    <div class="contact-cards">
+      <div class="card">📞 <strong>Phone:</strong> 604‑316‑8221</div>
+      <div class="card">✉️ <strong>Email:</strong> <a href="mailto:info@rochacontracting.ca">info@rochacontracting.ca</a></div>
     </div>
-  </section>
 
-  <footer>
-    © 2026 Rocha Contracting Inc. | All Rights Reserved
-  </footer>
+    <div class="card">
+      <div class="map-title">Serving the Fraser‑Cascade, Fraser Valley &amp; Lower Mainland Regions</div>
+      <div class="map-image-wrap">
+        <img src="Rb.gif" alt="Service area map" class="service-area-img">
+      </div>
+      <p class="map-caption">Business location: Chilliwack, BC</p>
+    </div>
+
+    <div class="form-wrap">
+      <h3>Request a Quote or Inquire About Our Services</h3>
+      <script type="text/javascript" src="https://form.jotform.com/jsform/260295934148060"></script>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Rocha Contracting Inc. | All Rights Reserved
+</footer>
 
 </body>
 </html>
