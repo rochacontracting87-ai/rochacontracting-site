@@ -206,9 +206,9 @@
         and accountability - especially when caring for professional and operational spaces.
       </p>
       <p>
-        With over a decade of experience in heavy-duty, commercial, and industrail cleaning,
+        With over a decade of experience in heavy-duty, commercial, and industrial cleaning,
         our team is equipped to meet the rigorous demands of property managers, facilities teams,
-        and commercial clients. We specialize in maintaining clean, sage, and compliant environments,
+        and commercial clients. We specialize in maintaining clean, safe, and compliant environments,
         with a strong focus on reliability, attention to detail, and minimal disruption to operations.
         Rocha Contracting Inc. is a cleaning partner you can rely on to protect your assets and
         uphold professional standards.
