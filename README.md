@@ -247,7 +247,7 @@
           landlords, and property managers who need spaces reset quickly and thoroughly.
           Services include heavy‑duty and post‑construction cleaning, floor scrubbing,
           stripping and waxing, window cleaning, carpet and upholstery cleaning,
-          ceiling cleaning, and tile &amp; grout restoration.
+          ceiling cleaning, and tile and grout restoration.
         </p>
         <p>
           <strong>Specialized experience includes:</strong> BC Housing operations
