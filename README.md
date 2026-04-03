@@ -230,7 +230,7 @@
           carpet and upholstery cleaning, and tile &amp; grout care.
         </p>
         <p>
-          <strong>Experience includes:</strong> healthcare facilities, schools,
+          <strong>Experience includes:</strong> Healthcare facilities, schools,
           manufacturing and warehouse environments, churches, nonprofit organizations,
           and large commercial projects — including Abbotsford Regional Hospital,
           Kamloops Sk’elep School of Excellence, Stein Valley Nlaka’pamux School (Lytton),
