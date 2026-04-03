@@ -233,7 +233,7 @@
           <strong>Experience includes:</strong> Healthcare facilities, schools,
           manufacturing and warehouse environments, churches, nonprofit organizations,
           and large commercial projects — including Abbotsford Regional Hospital,
-          Kamloops Sk’elep School of Excellence, Stein Valley Nlaka’pamux School (Lytton),
+          Sk’elep School of Excellence (Kamloops), Stein Valley Nlaka’pamux School (Lytton),
           Tycrop, Petcurean, Northview Church (Abbotsford), Chilliwack Community Services,
           and the Red Bull post‑construction project in Chilliwack.
         </p>
