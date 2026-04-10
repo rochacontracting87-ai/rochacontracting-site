@@ -123,6 +123,27 @@
       margin-bottom:6px;
     }
 
+    /* PROJECT PHOTO REEL */
+    .project-reel{
+      margin-top:36px;
+    }
+
+    .reel-track{
+      display:flex;
+      gap:16px;
+      overflow-x:auto;
+      padding-bottom:10px;
+    }
+
+    .reel-track img{
+      flex:0 0 280px;
+      height:190px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
     /* CONTACT */
     .contact{
       background:var(--panel);
@@ -329,6 +350,45 @@
   </div>
 
 </div>
+
+<!-- PROJECT PHOTO REEL -->
+<section class="project-reel">
+  <h2>Project Highlights</h2>
+  <p>Examples of completed commercial, residential, and institutional cleaning projects.</p>
+
+  <div class="reel-track">
+    <img src="projects/project-01-school-floor-after.jpg.JPG" alt="">
+    <img src="projects/project-01-school-floor-foyer.jpg.JPG" alt="">
+    <img src="projects/project-01-school-floor-scrub.jpg.JPG" alt="">
+    <img src="projects/project-01-school-floor-wax.jpg.JPG" alt="">
+
+    <img src="projects/project-02-commercial-floor.jpg.JPG" alt="">
+
+    <img src="projects/project-03-commercial-area-rug.jpg.JPG" alt="">
+    <img src="projects/project-03-commercial-clean-floor.jpg.JPG" alt="">
+    <img src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG" alt="">
+    <img src="projects/project-03-commercial-floor-wax.jpg.JPG" alt="">
+
+    <img src="projects/project-04-bchousing-after.jpg.JPG" alt="">
+    <img src="projects/project-04-bchousing-before.jpg.JPG" alt="">
+
+    <img src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG" alt="">
+    <img src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG" alt="">
+
+    <img src="projects/project-06-office-carpet-window.jpg.JPG" alt="">
+
+    <img src="projects/project-07-commercial-kitchen-vent.jpg.JPG" alt="">
+    <img src="projects/project-07-tile-grout.jpg.JPG" alt="">
+
+    <img src="projects/project-08-commercial-floor.jpg.JPG" alt="">
+
+    <img src="projects/project-09-tile-grout-residence.jpg.JPG" alt="">
+
+    <img src="projects/project-10-upholstry.jpg.JPG" alt="">
+    <img src="projects/project-10-vents.jpg.JPG" alt="">
+    <img src="projects/project-10-window.jpg.JPG" alt="">
+  </div>
+</section>
 
 </div>
 
