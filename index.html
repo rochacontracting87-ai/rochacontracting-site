@@ -123,7 +123,7 @@
       margin-bottom:6px;
     }
 
-    /* PROJECT PHOTO REEL */
+    /* PROJECT PHOTO REEL (fixed) */
     .project-reel{
       margin-top:36px;
     }
@@ -135,22 +135,61 @@
       padding-bottom:10px;
     }
 
-    .reel-track img{
-      flex:0 0 280px;
+    .reel-item{
+      flex:0 0 280px;            /* keeps the reel consistent */
+      position:relative;
+    }
+
+    .reel-btn{
+      display:block;
+      width:280px;
       height:190px;
+      border:0;
+      padding:0;
+      background:transparent;
+      cursor:pointer;
+    }
+
+    .reel-btn img{
+      width:100%;
+      height:100%;
       object-fit:cover;
       border-radius:12px;
       border:1px solid var(--border);
       box-shadow:var(--shadow);
+      display:block;
     }
 
-    /* LIGHTBOX */
+    /* Caption overlay: hidden by default */
+    .reel-caption{
+      position:absolute;
+      left:10px;
+      right:10px;
+      bottom:10px;
+      padding:8px 10px;
+      border-radius:10px;
+      font-size:12px;            /* smaller font */
+      font-weight:600;
+      line-height:1.25;
+      color:#fff;
+      background:linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,.20));
+      opacity:0;
+      transform:translateY(6px);
+      transition:opacity .18s ease, transform .18s ease;
+      pointer-events:none;       /* prevents blocking clicks */
+    }
+
+    /* Show caption ONLY on hover (and on focus for keyboard accessibility) */
+    .reel-item:hover .reel-caption,
+    .reel-item:focus-within .reel-caption{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* LIGHTBOX (upgraded nav + caption) */
     .lightbox{
       position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
+      inset:0;
       background:rgba(0,0,0,0.85);
       display:none;
       align-items:center;
@@ -158,12 +197,60 @@
       z-index:9999;
     }
 
-    .lightbox img{
+    #lightbox-img{
       max-width:90%;
-      max-height:90%;
+      max-height:82%;
       border-radius:12px;
       box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .lb-close{
+      position:absolute;
+      top:18px;
+      right:18px;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(0,0,0,.35);
+      color:#fff;
+      font-size:28px;
+      line-height:1;
       cursor:pointer;
+    }
+
+    .lb-nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:48px;
+      height:72px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(0,0,0,.35);
+      color:#fff;
+      font-size:44px;
+      line-height:1;
+      cursor:pointer;
+    }
+
+    .lb-prev{ left:18px; }
+    .lb-next{ right:18px; }
+
+    .lb-text{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:18px;
+      max-width:min(900px, 92vw);
+      padding:10px 14px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:600;
+      color:#fff;
+      background:rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.18);
+      text-align:center;
     }
 
     /* CONTACT */
@@ -243,24 +330,6 @@
 
   </style>
 </head>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Expanded project image">
-</div>
-
-<script>
-  function openLightbox(src){
-    const lightbox = document.getElementById('lightbox');
-    const img = document.getElementById('lightbox-img');
-    img.src = src;
-    lightbox.style.display = 'flex';
-  }
-
-  function closeLightbox(){
-    document.getElementById('lightbox').style.display = 'none';
-  }
-</script>
 
 <body>
 
@@ -400,107 +469,212 @@
   <div class="reel-track">
 
     <div class="reel-item">
-      <img src="projects/project-01-school-floor-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-01-school-floor-after.jpg.JPG"
+        data-caption="Scrub, strip, and wax - Sk'elep School of Excellence"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-01-school-floor-after.jpg.JPG" alt="School floor after scrub strip wax">
+      </button>
       <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-01-school-floor-foyer.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-01-school-floor-foyer.jpg.JPG"
+        data-caption="Scrub, strip, and wax - Sk'elep School of Excellence"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-01-school-floor-foyer.jpg.JPG" alt="School floor foyer">
+      </button>
       <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-01-school-floor-scrub.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-01-school-floor-scrub.jpg.JPG"
+        data-caption="Scrub, strip, and wax - Sk'elep School of Excellence"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-01-school-floor-scrub.jpg.JPG" alt="School floor scrubbing">
+      </button>
       <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-01-school-floor-wax.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-01-school-floor-wax.jpg.JPG"
+        data-caption="Scrub, strip, and wax - Sk'elep School of Excellence"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-01-school-floor-wax.jpg.JPG" alt="School floor waxing">
+      </button>
       <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-02-commercial-floor.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-02-commercial-floor.jpg.JPG"
+        data-caption="Scrub, strip, and wax - Puratos"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-02-commercial-floor.jpg.JPG" alt="Commercial floor cleaning">
+      </button>
       <div class="reel-caption">Scrub, strip, and wax - Puratos</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-03-commercial-area-rug.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-03-commercial-area-rug.jpg.JPG"
+        data-caption="Area rug cleaning - Chilliwack Community Services"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-03-commercial-area-rug.jpg.JPG" alt="Commercial area rug cleaning">
+      </button>
       <div class="reel-caption">Area rug cleaning - Chilliwack Community Services</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-03-commercial-clean-floor.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-03-commercial-clean-floor.jpg.JPG"
+        data-caption="Deep clean and floor finishing - BC Housing Paramount"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-03-commercial-clean-floor.jpg.JPG" alt="Commercial clean floor finishing">
+      </button>
       <div class="reel-caption">Deep clean and floor finishing - BC Housing Paramount</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG"
+        data-caption="Scrub and wax - Chilliwack Community Services"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG" alt="Commercial floor scrub wax">
+      </button>
       <div class="reel-caption">Scrub and wax - Chilliwack Community Services</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-03-commercial-floor-wax.jpg.JPG" onclick="openLightbox(this.src)">
-      <div class="reel-caption">Scrub and wax - Chilliwack Community Services
+      <button class="reel-btn" type="button"
+        data-src="projects/project-03-commercial-floor-wax.jpg.JPG"
+        data-caption="Scrub and wax - Chilliwack Community Services"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-03-commercial-floor-wax.jpg.JPG" alt="Commercial floor wax complete">
+      </button>
+      <div class="reel-caption">Scrub and wax - Chilliwack Community Services</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-04-bchousing-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-04-bchousing-after.jpg.JPG"
+        data-caption="Move out cleaning AFTER - BC Housing"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-04-bchousing-after.jpg.JPG" alt="BC Housing move out after">
+      </button>
       <div class="reel-caption">Move out cleaning AFTER - BC Housing</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-04-bchousing-before.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-04-bchousing-before.jpg.JPG"
+        data-caption="Move out cleaning BEFORE - BC Housing"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-04-bchousing-before.jpg.JPG" alt="BC Housing move out before">
+      </button>
       <div class="reel-caption">Move out cleaning BEFORE - BC Housing</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG"
+        data-caption="Commercial ceiling cleaning AFTER - Abbotsford Regional Hospital"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG" alt="Hospital kitchen ceiling after">
+      </button>
       <div class="reel-caption">Commercial ceiling cleaning AFTER - Abbotsford Regional Hospital</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG"
+        data-caption="Commercial ceiling cleaning BEFORE - Abbotsford Regional Hospital"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG" alt="Hospital kitchen ceiling before">
+      </button>
       <div class="reel-caption">Commercial ceiling cleaning BEFORE - Abbotsford Regional Hospital</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-06-office-carpet-window.jpg.JPG" onclick="openLightbox(this.src)">
-      <div class="reel-caption">Office carpet and window cleaning - Redbull Chilliwack</div>
+      <button class="reel-btn" type="button"
+        data-src="projects/project-06-office-carpet-window.jpg.JPG"
+        data-caption="Office carpet and window cleaning - Red Bull Chilliwack"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-06-office-carpet-window.jpg.JPG" alt="Office carpet and window cleaning">
+      </button>
+      <div class="reel-caption">Office carpet and window cleaning - Red Bull Chilliwack</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-07-commercial-kitchen-vent.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-07-commercial-kitchen-vent.jpg.JPG"
+        data-caption="Commercial kitchen vent and ceiling cleaning - Chartwell Cedarbrook Mission"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-07-commercial-kitchen-vent.jpg.JPG" alt="Commercial kitchen vent cleaning">
+      </button>
       <div class="reel-caption">Commercial kitchen vent and ceiling cleaning - Chartwell Cedarbrook Mission</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-07-tile-grout.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-07-tile-grout.jpg.JPG"
+        data-caption="Commercial tile and grout - Chartwell Cedarbrook Mission"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-07-tile-grout.jpg.JPG" alt="Commercial tile grout cleaning">
+      </button>
       <div class="reel-caption">Commercial tile and grout - Chartwell Cedarbrook Mission</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-08-commercial-floor.jpg.JPG" onclick="openLightbox(this.src)">
-      <div class="reel-caption">Large‑scale commercial floor cleaning - Trans Mountain Pipeline</div>
+      <button class="reel-btn" type="button"
+        data-src="projects/project-08-commercial-floor.jpg.JPG"
+        data-caption="Large-scale commercial floor cleaning - Trans Mountain Pipeline"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-08-commercial-floor.jpg.JPG" alt="Large commercial floor cleaning">
+      </button>
+      <div class="reel-caption">Large-scale commercial floor cleaning - Trans Mountain Pipeline</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-09-tile-grout-residence.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-09-tile-grout-residence.jpg.JPG"
+        data-caption="Residential tile and grout cleaning"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-09-tile-grout-residence.jpg.JPG" alt="Residential tile grout cleaning">
+      </button>
       <div class="reel-caption">Residential tile and grout cleaning</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-10-upholstry.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-10-upholstry.jpg.JPG"
+        data-caption="Commercial upholstery cleaning"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-10-upholstry.jpg.JPG" alt="Commercial upholstery cleaning">
+      </button>
       <div class="reel-caption">Commercial upholstery cleaning</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-10-vents.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-10-vents.jpg.JPG"
+        data-caption="Vent and airflow cleaning"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-10-vents.jpg.JPG" alt="Vent cleaning">
+      </button>
       <div class="reel-caption">Vent and airflow cleaning</div>
     </div>
 
     <div class="reel-item">
-      <img src="projects/project-10-window.jpg.JPG" onclick="openLightbox(this.src)">
+      <button class="reel-btn" type="button"
+        data-src="projects/project-10-window.jpg.JPG"
+        data-caption="Professional window cleaning"
+        onclick="openLightboxByButton(this)">
+        <img src="projects/project-10-window.jpg.JPG" alt="Window cleaning">
+      </button>
       <div class="reel-caption">Professional window cleaning</div>
     </div>
 
@@ -538,6 +712,78 @@
 <footer>
   © 2026 Rocha Contracting Inc. | All Rights Reserved
 </footer>
+
+<!-- LIGHTBOX (with next/prev) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" type="button" aria-label="Close" onclick="closeLightbox()">×</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous" onclick="prevLightbox(event)">‹</button>
+
+  <img id="lightbox-img" alt="Expanded project image">
+
+  <button class="lb-nav lb-next" type="button" aria-label="Next" onclick="nextLightbox(event)">›</button>
+  <div class="lb-text" id="lightbox-caption"></div>
+</div>
+
+<script>
+  // Build album from the reel buttons
+  const reelButtons = Array.from(document.querySelectorAll('.reel-btn'));
+  let currentIndex = 0;
+
+  function openLightboxByButton(btn){
+    currentIndex = reelButtons.indexOf(btn);
+    showLightboxIndex(currentIndex);
+    openLightbox();
+  }
+
+  function openLightbox(){
+    const lb = document.getElementById('lightbox');
+    lb.style.display = 'flex';
+    lb.setAttribute('aria-hidden','false');
+  }
+
+  function closeLightbox(){
+    const lb = document.getElementById('lightbox');
+    lb.style.display = 'none';
+    lb.setAttribute('aria-hidden','true');
+  }
+
+  function showLightboxIndex(i){
+    const btn = reelButtons[i];
+    const src = btn.getAttribute('data-src');
+    const cap = btn.getAttribute('data-caption') || '';
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').textContent = cap;
+  }
+
+  function nextLightbox(e){
+    if(e) e.stopPropagation();
+    currentIndex = (currentIndex + 1) % reelButtons.length;
+    showLightboxIndex(currentIndex);
+  }
+
+  function prevLightbox(e){
+    if(e) e.stopPropagation();
+    currentIndex = (currentIndex - 1 + reelButtons.length) % reelButtons.length;
+    showLightboxIndex(currentIndex);
+  }
+
+  // Close when clicking the dark background (not the image)
+  document.getElementById('lightbox').addEventListener('click', function(e){
+    if(e.target === this){
+      closeLightbox();
+    }
+  });
+
+  // Keyboard support: Esc, Left, Right
+  document.addEventListener('keydown', function(e){
+    const lb = document.getElementById('lightbox');
+    if(lb.style.display !== 'flex') return;
+
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') nextLightbox();
+    if(e.key === 'ArrowLeft') prevLightbox();
+  });
+</script>
 
 </body>
 </html>
