@@ -144,6 +144,28 @@
       box-shadow:var(--shadow);
     }
 
+    /* LIGHTBOX */
+    .lightbox{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.85);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+    }
+
+    .lightbox img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:12px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+      cursor:pointer;
+    }
+
     /* CONTACT */
     .contact{
       background:var(--panel);
@@ -218,8 +240,27 @@
       font-weight:600;
       text-decoration:none;
     }
+
   </style>
 </head>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Expanded project image">
+</div>
+
+<script>
+  function openLightbox(src){
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox(){
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 <body>
 
@@ -357,36 +398,112 @@
   <p>Examples of completed commercial, residential, and institutional cleaning projects.</p>
 
   <div class="reel-track">
-    <img src="projects/project-01-school-floor-after.jpg.JPG" alt="">
-    <img src="projects/project-01-school-floor-foyer.jpg.JPG" alt="">
-    <img src="projects/project-01-school-floor-scrub.jpg.JPG" alt="">
-    <img src="projects/project-01-school-floor-wax.jpg.JPG" alt="">
 
-    <img src="projects/project-02-commercial-floor.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-01-school-floor-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
+    </div>
 
-    <img src="projects/project-03-commercial-area-rug.jpg.JPG" alt="">
-    <img src="projects/project-03-commercial-clean-floor.jpg.JPG" alt="">
-    <img src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG" alt="">
-    <img src="projects/project-03-commercial-floor-wax.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-01-school-floor-foyer.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
+    </div>
 
-    <img src="projects/project-04-bchousing-after.jpg.JPG" alt="">
-    <img src="projects/project-04-bchousing-before.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-01-school-floor-scrub.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
+    </div>
 
-    <img src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG" alt="">
-    <img src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-01-school-floor-wax.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub, strip, and wax - Sk'elep School of Excellence</div>
+    </div>
 
-    <img src="projects/project-06-office-carpet-window.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-02-commercial-floor.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub, strip, and wax - Puratos</div>
+    </div>
 
-    <img src="projects/project-07-commercial-kitchen-vent.jpg.JPG" alt="">
-    <img src="projects/project-07-tile-grout.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-03-commercial-area-rug.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Area rug cleaning - Chilliwack Community Services</div>
+    </div>
 
-    <img src="projects/project-08-commercial-floor.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-03-commercial-clean-floor.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Deep clean and floor finishing - BC Housing Paramount</div>
+    </div>
 
-    <img src="projects/project-09-tile-grout-residence.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-03-commercial-floor-scrub-wax.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub and wax - Chilliwack Community Services</div>
+    </div>
 
-    <img src="projects/project-10-upholstry.jpg.JPG" alt="">
-    <img src="projects/project-10-vents.jpg.JPG" alt="">
-    <img src="projects/project-10-window.jpg.JPG" alt="">
+    <div class="reel-item">
+      <img src="projects/project-03-commercial-floor-wax.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Scrub and wax - Chilliwack Community Services
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-04-bchousing-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Move out cleaning AFTER - BC Housing</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-04-bchousing-before.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Move out cleaning BEFORE - BC Housing</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-05-commercial-kitchen-ceiling-hospital-after.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Commercial ceiling cleaning AFTER - Abbotsford Regional Hospital</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-05-commercial-kitchen-ceiling-hospital-before.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Commercial ceiling cleaning BEFORE - Abbotsford Regional Hospital</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-06-office-carpet-window.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Office carpet and window cleaning - Redbull Chilliwack</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-07-commercial-kitchen-vent.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Commercial kitchen vent and ceiling cleaning - Chartwell Cedarbrook Mission</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-07-tile-grout.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Commercial tile and grout - Chartwell Cedarbrook Mission</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-08-commercial-floor.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Large‑scale commercial floor cleaning - Trans Mountain Pipeline</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-09-tile-grout-residence.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Residential tile and grout cleaning</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-10-upholstry.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Commercial upholstery cleaning</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-10-vents.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Vent and airflow cleaning</div>
+    </div>
+
+    <div class="reel-item">
+      <img src="projects/project-10-window.jpg.JPG" onclick="openLightbox(this.src)">
+      <div class="reel-caption">Professional window cleaning</div>
+    </div>
+
   </div>
 </section>
 
